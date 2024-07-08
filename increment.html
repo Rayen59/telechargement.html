@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site d'Olympiades Mathématiques - Version 2.0</title>
+    <style>
+        /* Votre style CSS existant */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #1a237e; /* Bleu foncé */
+        }
+
+        p {
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .highlight {
+            background-color: #ffffcc; /* Jaune pâle */
+            padding: 8px;
+            border-radius: 4px;
+        }
+
+        .download-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .download-link a {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #1a237e; /* Bleu foncé */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-link a:hover {
+            background-color: #303f9f; /* Bleu plus foncé au survol */
+        }
+
+        .problems-section {
+            margin-top: 40px;
+        }
+
+        .problems-section h2 {
+            color: #283593; /* Bleu légèrement plus clair */
+        }
+
+        .problems-section .problem {
+            margin-bottom: 20px;
+            border-left: 4px solid #3949ab; /* Nuance de bleu */
+            padding-left: 10px;
+        }
+
+        .competitions-section {
+            margin-top: 40px;
+        }
+
+        .competitions-section h2 {
+            color: #283593; /* Bleu légèrement plus clair */
+        }
+
+        .competitions-section .competition-info {
+            margin-bottom: 20px;
+            border-left: 4px solid #3949ab; /* Nuance de bleu */
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenue sur le Site des Olympiades Mathématiques - Version 2.0</h1>
+        <p>Nous sommes ravis de vous présenter la toute nouvelle version 2.0 de notre site dédié aux Olympiades Mathématiques. Cette mise à jour apporte une expérience améliorée et de nouvelles fonctionnalités pour les passionnés de mathématiques de tous niveaux.</p>
+
+        <h2>Quoi de neuf dans la Version 2.0 ?</h2>
+        <p>Dans cette nouvelle version :</p>
+        <ul>
+            <li>Nouveau design plus moderne et convivial.</li>
+            <li>Navigation simplifiée pour accéder rapidement aux différentes sections.</li>
+            <li>Introduction de nouveaux problèmes mathématiques et énoncés d'équations fonctionnelles.</li>
+            <li>Mise à jour des informations sur les compétitions internationales et les événements liés aux olympiades.</li>
+        </ul>
+
+        <p>Explorez nos <span class="highlight">Problèmes Mathématiques</span> où vous pouvez vous défier avec des énoncés complexes et développer vos compétences en résolution de problèmes. Les solutions et les approches pour chaque problème sont également disponibles pour enrichir votre apprentissage.</p>
+
+        <p>Restez informé grâce à nos articles sur les dernières nouvelles et les avancées dans le monde des mathématiques olympiques. Nous sommes déterminés à fournir un contenu enrichissant et éducatif pour les passionnés de mathématiques du monde entier.</p>
+
+        <p>Vous pouvez télécharger le fichier PDF contenant des informations détaillées sur les problèmes mathématiques et les compétitions olympiques en utilisant le lien ci-dessous :</p>
+
+        <div class="download-link">
+            <a id="download-link" href="https://drive.google.com/file/d/16-qtGSvxul5jXjaDz_eEht4agOyKOge7/view?usp=drivesdk&fbclid=IwZXh0bgNhZW0CMTAAAR1ABkuz8vOhPo2AqILMeK7MRWFpgaeZKV7G50c3eFD9VcCb88aqDafVQ2g_aem_FELk4pOXIUrDmdkk_eJuIg" download>Télécharger les Informations Complémentaires</a>
+        </div>
+
+        <p>Vous pouvez également installer notre application Math olympiad depuis le lien suivant <a href="https://drive.google.com/file/d/16-qtGSvxul5jXjaDz_eEht4agOyKOge7/view?usp=drivesdk&fbclid=IwZXh0bgNhZW0CMTAAAR1ABkuz8vOhPo2AqILMeK7MRWFpgaeZKV7G50c3eFD9VcCb88aqDafVQ2g_aem_FELk4pOXIUrDmdkk_eJuIg" target="_blank">cliquer ici</a> pour ouvrir le lien directement dans une nouvelle fenêtre.</p>
+        
+        <p>Nombre de téléchargements de l'application : <span id="download-count">0</span></p>
+    </div>
+
+    <script>
+        // Fonction pour incrémenter le compteur de téléchargements
+        function incrementDownloadCount() {
+            // Récupérer le compteur actuel depuis le span
+            var downloadCountElement = document.getElementById('download-count');
+            var currentCount = parseInt(downloadCountElement.textContent);
+
+            // Incrémenter le compteur
+            currentCount++;
+
+            // Mettre à jour le contenu du span avec le nouveau compteur
+            downloadCountElement.textContent = currentCount;
+        }
+
+        // Ajouter un gestionnaire d'événement au lien de téléchargement
+        var downloadLink = document.getElementById('download-link');
+        downloadLink.addEventListener('click', incrementDownloadCount);
+    </script>
+</body>
+</html>
